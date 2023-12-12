@@ -22,72 +22,81 @@ class _MusicPlayerScreenState extends State<MusicPlayerScreen> {
           backgroundColor: black,
         ),
         backgroundColor: black,
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset(
-              "assets/image/animal.jpeg",
-              height: MediaQuery.sizeOf(context).height * 0.50,
-              width: MediaQuery.sizeOf(context).width * 0.60,
-            ),
-            Text(
-              "Animal",
-              style: TextStyle(color: white, fontSize: 25),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.arrow_back,
-                    color: white,
-                    size: 30,
-                  ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Image.asset(
+                  "assets/image/animal.jpeg",
+                  height: MediaQuery.sizeOf(context).height * 0.30,
+                  width: MediaQuery.sizeOf(context).width * 0.60,
+                  fit: BoxFit.cover,
                 ),
-                SizedBox(
-                  height: 10,
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.play_circle,
-                    color: white,
-                    size: 40,
-                  ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: Icon(
-                    Icons.arrow_forward,
-                    color: white,
-                    size: 30,
-                  ),
-                ),
-              ],
-            ),
-            Slider(
-              value: 5,
-              max: 100,
-              onChanged: (value) {},
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: Row(
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Text(
+                "Animal",
+                style: TextStyle(color: white, fontSize: 25),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("00:00:00",style: TextStyle(color: white,fontSize: 15),),
-                  Spacer(),
-                  Text("00:00:00",style: TextStyle(color: white,fontSize: 15),),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.arrow_back,
+                      color: white,
+                      size: 30,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.play_circle,
+                      color: white,
+                      size: 40,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.arrow_forward,
+                      color: white,
+                      size: 30,
+                    ),
+                  ),
                 ],
               ),
-            )
-          ],
+              Slider(
+                value: 5,
+                max: 100,
+                onChanged: (value) {},
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Row(
+                  children: [
+                    Text("00:00:00",style: TextStyle(color: white,fontSize: 15),),
+                    Spacer(),
+                    Text("00:00:00",style: TextStyle(color: white,fontSize: 15),),
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
